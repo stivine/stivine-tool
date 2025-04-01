@@ -1,5 +1,10 @@
 import os
 
+# 输入QQ号
+qq_number = input("请输入QQ号: ").strip()
+
+directory_path = f"/mnt/e/qqpersonal/{qq_number}/nt_qq/nt_data/Pic/"
+
 def manage_image_files(directory, extensions=[".jpg", ".png"]):
     """
     遍历指定目录，查找并处理同一图片不同分辨率的文件对。
@@ -46,15 +51,14 @@ def manage_image_files(directory, extensions=[".jpg", ".png"]):
                     print(f"Deleted from thumb: {thumb_file}")
 
 
-# 使用示例：请将这里的目录替换为你想要检查的实际目录路径
+# 使用例：处理2024年1月到11月的目录
+# 目录名格式为"2024-01", "2024-02", ..., "2024-11"
+begin_month = "2024-01"
+end_month = "2024-11"
+num = 11
 
-# 对2024-01到2024-11目录进行处理
-
-directory_path = "/mnt/e/qqpersonal/1623970771/nt_qq/nt_data/Pic/"
-
-# 2024年1月到11月的目录
-for month in range(1, 12):
-    month_dir = os.path.join(directory_path, f"2024-{month:02d}")
+for month in range(num):
+    month_dir = os.path.join(directory_path, f"{begin_month[:5]}{str(month).zfill(2)}")
     if os.path.exists(month_dir):
         manage_image_files(month_dir)
     else:
