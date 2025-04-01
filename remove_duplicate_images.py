@@ -3,6 +3,11 @@ import os
 # 输入QQ号
 qq_number = input("请输入QQ号: ").strip()
 
+# 使用例：处理2024年1月到11月的目录
+# 目录名格式为"2024-01", "2024-02", ..., "2024-11"
+begin_month = "2024-01"
+num = 11
+
 directory_path = f"/mnt/e/qqpersonal/{qq_number}/nt_qq/nt_data/Pic/"
 
 def manage_image_files(directory, extensions=[".jpg", ".png"]):
@@ -49,13 +54,6 @@ def manage_image_files(directory, extensions=[".jpg", ".png"]):
                 if os.path.exists(thumb_file):
                     os.remove(thumb_file)
                     print(f"Deleted from thumb: {thumb_file}")
-
-
-# 使用例：处理2024年1月到11月的目录
-# 目录名格式为"2024-01", "2024-02", ..., "2024-11"
-begin_month = "2024-01"
-end_month = "2024-11"
-num = 11
 
 for month in range(num):
     month_dir = os.path.join(directory_path, f"{begin_month[:5]}{str(month).zfill(2)}")
