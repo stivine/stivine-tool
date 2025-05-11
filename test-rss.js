@@ -1,6 +1,16 @@
 {
     "camp2025": [
         {
+            "name": "TEST7",
+            "institute": "数据科学学院",
+            "description": "第一轮2025年3月1日-2025年4月30日，第二轮2025年5月1日-2025年6月20日",
+            "deadline": "2025-04-30T00:00:00+08:00",
+            "website": "https://sds.cuhk.edu.cn/article/2110",
+            "tags": [
+                "港三"
+            ]
+        },
+        {
             "name": "TEST6",
             "institute": "数据科学学院",
             "description": "第一轮2025年3月1日-2025年4月30日，第二轮2025年5月1日-2025年6月20日",
