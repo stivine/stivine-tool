@@ -1,6 +1,10 @@
 {
     "camp2025": [
         {
+            "name": "TEST12",
+            "institute": "数据科学学院",
+        },
+        {
             "name": "TEST11",
             "institute": "数据科学学院",
         }, 
