@@ -10,6 +10,8 @@ num = 11
 
 directory_path = f"/mnt/e/qqpersonal/{qq_number}/nt_qq/nt_data/Pic/"
 
+# directory_path = f"/mnt/e/qqpersonal/{qq_number}/nt_qq/nt_data/Emoji/emoji-recv
+
 def manage_image_files(directory, extensions=[".jpg", ".png"]):
     """
     遍历指定目录，查找并处理同一图片不同分辨率的文件对。
