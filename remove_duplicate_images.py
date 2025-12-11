@@ -5,10 +5,12 @@ qq_number = input("请输入QQ号: ").strip()
 
 # 使用例：处理2024年1月到11月的目录
 # 目录名格式为"2024-01", "2024-02", ..., "2024-11"
-begin_month = "2024-01"
-num = 11
+# 自注：2025-06已经处理过
 
-directory_path = f"/mnt/e/qqpersonal/{qq_number}/nt_qq/nt_data/Pic/"
+begin_month = "2025-07"
+num = 3
+
+directory_path = f"/mnt/e/QQ/Tencent Files/Tencent Files/{qq_number}/nt_qq/nt_data/Pic/"
 
 # directory_path = f"/mnt/e/qqpersonal/{qq_number}/nt_qq/nt_data/Emoji/emoji-recv
 
@@ -58,7 +60,7 @@ def manage_image_files(directory, extensions=[".jpg", ".png"]):
                     print(f"Deleted from thumb: {thumb_file}")
 
 for month in range(num):
-    month_dir = os.path.join(directory_path, f"{begin_month[:5]}{str(month).zfill(2)}")
+    month_dir = os.path.join(directory_path, f"{begin_month[:5]}{str(month+int(begin_month[5:7])).zfill(2)}")
     if os.path.exists(month_dir):
         manage_image_files(month_dir)
     else:

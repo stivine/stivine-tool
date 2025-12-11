@@ -1,0 +1,1 @@
+streamlink https://www.huya.com/30255430 hs_source --player /mnt/e/Program\ Files/DAUM/PotPlayer/PotPlayerMini64.exe
